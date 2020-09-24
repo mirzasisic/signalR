@@ -1,0 +1,18 @@
+﻿h3, h4{
+    text-align:center
+}
+
+.userIdRow{
+    margin-left:40%
+}
+
+.row{
+    padding: 5px 0 0 5px
+}
+.col{
+    padding: 0 5px 5px 0
+}
+
+.button{
+    width:100%
+}

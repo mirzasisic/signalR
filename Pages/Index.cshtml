@@ -1,0 +1,113 @@
+﻿@page
+
+    <div class="row">
+        <div class="col-9">
+            <div class="row" id="userIdRow">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-2">UserID</div>
+                        <div class="col-4"><input type="text" id="userId" readonly /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>Send message</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col"><h4>Send message to all users</h4></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">Message</div>
+                        <div class="col-4"><input type="text" id="messageInput" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <input type="button" id="sendButton" value="Send Message" class="button" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col"><h4>Send message to group</h4></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">Message</div>
+                        <div class="col-4"><input type="text" id="messageToGroup" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">Group</div>
+                        <div class="col-4">
+                            <select name="group" id="sendToGroup">
+                                <option value="mobile">Mobile</option>
+                                <option value="web">Web</option>
+                                <option value="desktop">Desktop</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <input type="button" id="sendToGroupBtn" value="Send Message" class="button" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="row"><h4>Add user to group</h4></div>
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-2">Group</div>
+                        <select name="group" id="addToGroup">
+                            <option value="mobile">Mobile</option>
+                            <option value="web">Web</option>
+                            <option value="desktop">Desktop</option>
+                        </select>
+                    </div>
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-8">
+                        <input type="button" id="addUser" value="Add user to group" class="button" />
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row"><h4>Remove user from</h4></div>
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-2">Group</div>
+                        <select name="group" id="removeFromGroup">
+                            <option value="mobile">Mobile</option>
+                            <option value="web">Web</option>
+                            <option value="desktop">Desktop</option>
+                        </select>
+                    </div>
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-8">
+                            <input type="button" id="removeUser" value="Remove user to group" class="button" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <h5>Messages</h5>
+                            <ul id="messagesList"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
+   <link rel="stylesheet" href="~/css/chat.css" />
